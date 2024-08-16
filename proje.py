@@ -1,11 +1,11 @@
-#Savaş arenası oyunu
-#Oyuncuların karakterleri savaşarak birbirlerini yok etmeye çalıştığı bir oyundur.
-#Karakterlerin savaşırken kullandığı silahlar ve canları vardır.
-#Karakterlerin ikisinin canı bittiğinde oyun sona erer.
-#Karakterlerin silahları ve vuruş önceliği taş kağıt makas oyunuyla belirlenir.
-#Oyuncular taş kağıt makas oyunu oynayarak karakterleri belirler.
-#Karakterlerin var sayılan silahları vardır.
-#4 karakter vardır ve bunlar dev, buyucu, şovalye, ejderhadır.
+print("\t\t\tSavaş arenası oyununa hoşgeldiniz.\n",
+"\tOyunun amacı rakip karakterleri yok etmeye çalışmaktır.\n",
+"\tKarakterlerin savaşırken kullandığı silahlar ve canları vardır.\n",
+"\tKarakterlerin herhangi birinin canı bittiğinde oyun sona erer.\n",
+"\tKarakterler ve vuruş önceliği taş kağıt makas oyunuyla belirlenir.\n",
+"\tOyuncular taş kağıt makas oyunu oynayarak karakterleri belirler.\n",
+"\tKarakterlerin varsayılan silahları vardır.\n",
+"\n")
 import random
 
 
@@ -84,10 +84,7 @@ ejderha_silahlar = ["Ates baskini", "Ruzgar", "Isın gozler"]
 i = 1
 while(i):
     print("Taş kağıt makas oyunu oynayarak karakterinizi seçin.\n")
-    
-    
-    print("\n Oyunu Sonlandırmak için 'q' tuşuna basınız.\n")
-        
+    print("\n Oyunu Sonlandırmak için 'q' tuşuna basınız.\n")      
     mevcut_karakterler = ["Dev", "buyucu", "Şovalye", "Ejderha"]
     kazanan = 0
     secim_oyun = input("Taş kağıt makas oyununu oynamak için 'Taş', 'Kağıt' veya 'Makas'dan 1'ini seçiniz:")    
@@ -174,7 +171,7 @@ while(i):
             mevcut_karakterler.remove("Dev")
 
             print("Dev karakterinin canı: ", oyuncunun_karakteri)
-            print("Dev karakterinin silahları: ", "Demir yumruk\t", "Balta\t\t", "Balyoz")
+            print("Dev karakterinin silahları: ", "Demir yumruk\t", "Balta\t", "Balyoz")
             
             
             kazanan=3
@@ -183,14 +180,14 @@ while(i):
             mevcut_karakterler.remove("buyucu")
 
             print("Büyücü karakterinin canı: ", oyuncunun_karakteri)
-            print("Büyücü karakterinin silahları: ", "Ates kure\t", "Can icecegi\t\t", "Buz oku")         
+            print("Büyücü karakterinin silahları: ", "Ates kure\t", "Can icecegi\t", "Buz oku")         
             kazanan=3
         elif karakter_secimi == "Şovalye":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, sovalye)
             mevcut_karakterler.remove("Şovalye")
 
             print("Şovalye karakterinin canı: ", oyuncunun_karakteri)
-            print("Şovalye karakterinin silahları: ", "Kralin kılıcı\t", "Topuz\t\t", "Kalkan")
+            print("Şovalye karakterinin silahları: ", "Kralin kılıcı\t", "Topuz\t", "Kalkan")
             
             kazanan=3
 
@@ -199,7 +196,7 @@ while(i):
             mevcut_karakterler.remove("Ejderha")
 
             print("Ejderha karakterinin canı: ", oyuncunun_karakteri)
-            print("Ejderha karakterinin silahları: ", "Ates baskini\t", "Ruzgar\t\t", "Isın gozler\t")
+            print("Ejderha karakterinin silahları: ", "Ates baskini\t", "Ruzgar\t", "Isın gozler\t")
             
             kazanan=3
         
@@ -284,7 +281,7 @@ while(i):
             
             print("Ejderha karakteri seçildi.")
             print("Ejderha karakterinin canı: ", oyuncunun_karakteri)
-            print("Ejderha karakterinin silahları: ", "Ates baskini", "Ruzgar", "Isın gozler")
+            print("Ejderha karakterinin silahları: ", "Ates baskini\t", "Ruzgar\t", "Isın gozler")
 
           
     print("\n\n\n\n ############# Savaş başlıyor ############# \n")
