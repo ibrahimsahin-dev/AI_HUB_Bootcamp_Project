@@ -21,30 +21,30 @@ def karakter_secimi_fonksiyonu(karakter_ismi, karakter_cani):
     return karakter_cani
 
 def atak(silah_ismi):
-    if(silah_ismi=="Demir Yumruk"):
-        return Demir_Yumruk
+    if(silah_ismi=="Demir yumruk"):
+        return Demir_yumruk
     elif(silah_ismi=="Balta"):
         return Balta
     elif(silah_ismi=="Balyoz"):
         return Balyoz
-    elif(silah_ismi=="Ateş küre"):
-        return Ateş_küre
-    elif(silah_ismi=="Can içeçeği"):
-        return Can_içeçeği
+    elif(silah_ismi=="Ates kure"):
+        return Ates_kure
+    elif(silah_ismi=="Can icecegi"):
+        return Can_icecegi
     elif(silah_ismi=="Buz oku"):
         return Buz_oku
-    elif(silah_ismi=="Kralın Kılıcı"):
-        return Kralın_Kılıcı
+    elif(silah_ismi=="Kralin kilici"):
+        return Kralin_kilici
     elif(silah_ismi=="Topuz"):
         return Topuz
     elif(silah_ismi=="Kalkan"):
         return Kalkan
-    elif(silah_ismi=="Ateş baskını"):
-        return Ateş_baskını
-    elif(silah_ismi=="Rüzgar"):
-        return Rüzgar
-    elif(silah_ismi=="Işın gözler"):
-        return Işın_gözler
+    elif(silah_ismi=="Ates baskini"):
+        return Ates_baskini
+    elif(silah_ismi=="Ruzgar"):
+        return Ruzgar
+    elif(silah_ismi=="Isın gozler"):
+        return Isın_gozler
 
 
 
@@ -58,28 +58,28 @@ ejderha=0
 
 kazanan = 0
 #Silahlar
-Demir_Yumruk = random.randint(10, 15)
+Demir_yumruk = random.randint(10, 15)
 Balta = random.randint(15, 20)
 Balyoz = random.randint(20, 25)
-Ateş_küre = random.randint(10, 15)
-Can_içeçeği = random.randint(15, 20)
+Ates_kure = random.randint(25, 40)
+Can_icecegi = random.randint(20, 40)
 Buz_oku = random.randint(20, 25)
-Kralın_Kılıcı = random.randint(10, 15)
+Kralin_kilici = random.randint(10, 15)
 Topuz = random.randint(15, 20)
 Kalkan = random.randint(20, 25)
-Ateş_baskını = random.randint(10, 15)
-Rüzgar = random.randint(15, 20)
-Işın_gözler = random.randint(20, 25)
+Ates_baskini = random.randint(10, 15)
+Ruzgar = random.randint(15, 20)
+Isın_gozler = random.randint(20, 25)
 #silah listesi
-silahlar = ["Demir Yumruk", "Balta", "Balyoz", "Ateş küre", "Can içeçeği", "Buz oku", "Kralın Kılıcı", "Topuz", "Kalkan", "Ateş baskını", "Rüzgar", "Işın gözler"]
+silahlar = ["Demir yumruk", "Balta", "Balyoz", "Ates kure", "Can icecegi", "Buz oku", "Kralin kilici", "Topuz", "Kalkan", "Ates baskini", "Ruzgar", "Isın gozler"]
 tas_kagit_makas = ["Taş", "Kağıt", "Makas"]
 mevcut_karakterler = ["Dev", "buyucu", "Şovalye", "Ejderha"]
-asil_karakterler = ["Dev", "buyucu", "Şovalye", "Ejderha"]
+
 #karakterler ve silahları
-dev_silahlar = ["Demir Yumruk", "Balta", "Balyoz"]
-buyucu_silahlar = ["Ateş küre", "Can içeçeği", "Buz oku"]
-sovalye_silahlar = ["Kralın Kılıcı", "Topuz", "Kalkan"]
-ejderha_silahlar = ["Ateş baskını", "Rüzgar", "Işın gözler"]
+dev_silahlar = ["Demir yumruk", "Balta", "Balyoz"]
+buyucu_silahlar = ["Ates kure", "Can icecegi", "Buz oku"]
+sovalye_silahlar = ["Kralin kilici", "Topuz", "Kalkan"]
+ejderha_silahlar = ["Ates baskini", "Ruzgar", "Isın gozler"]
 
 i = 1
 while(i):
@@ -101,19 +101,20 @@ while(i):
                 
             elif bilgisayar_secimi == "Kağıt":
                 print("Bilgisayarın seçimi: ", bilgisayar_secimi)
-                print("Kaybettiniz \n şimdi bilgisayarın karakterini seçiyor.")
+                print("Kaybettiniz \nŞimdi bilgisayarınız karakterini seçiyor.\n")
+                
                 kazanan = -1
                 break
             elif bilgisayar_secimi == "Makas":
                 print("Bilgisayarın seçimi: ", bilgisayar_secimi)
-                print("Kazandınız \n şimdi karakterinizi seçebilirsiniz.")
+                print("Kazandınız \nŞimdi karakterinizi seçebilirsiniz.\n")
                 kazanan = 1
                 break   
         elif secim_oyun == "Kağıt":
             
             if bilgisayar_secimi == "Taş":
                 print("Bilgisayarın seçimi: ", bilgisayar_secimi)
-                print("Kazandınız \n şimdi karakterinizi seçebilirsiniz.")
+                print("Kazandınız \nŞimdi karakterinizi seçebilirsiniz.\n")
                 kazanan = 1
                 break
             elif bilgisayar_secimi == "Kağıt":
@@ -122,19 +123,19 @@ while(i):
                 secim_oyun = input()
             elif bilgisayar_secimi == "Makas":
                 print("Bilgisayarın seçimi: ", bilgisayar_secimi)
-                print("Kaybettiniz \n şimdi bilgisayarın karakterini seçiyor.")
+                print("Kaybettiniz \nŞimdi bilgisayarınız karakterini seçiyor.\n")
                 kazanan = -1
                 break
         elif secim_oyun == "Makas":
             
             if bilgisayar_secimi == "Taş":
                 print("Bilgisayarın seçimi: ", bilgisayar_secimi)
-                print("Kaybettiniz \n şimdi bilgisayarın karakterini seçiyor.")
+                print("Kaybettiniz \nŞimdi bilgisayarınız karakterini seçiyor.\n")
                 kazanan = -1
                 break
             elif bilgisayar_secimi == "Kağıt":
                 print("Bilgisayarın seçimi: ", bilgisayar_secimi)
-                print("Kazandınız \n şimdi karakterinizi seçebilirsiniz.")
+                print("Kazandınız \nŞimdi karakterinizi seçebilirsiniz.\n")
                 kazanan = 1
                 break
             elif bilgisayar_secimi == "Makas":
@@ -155,53 +156,52 @@ while(i):
     if(i==0):
         break
         
-    print("Mevcut karakterler\n")
+    print("Mevcut karakterler")
     for karakter in mevcut_karakterler:
         print(karakter)
     
     while (kazanan==1):
+        
         print("Karakterinizi seçiniz.")
         karakter_secimi = input()
+        while(karakter_secimi not in mevcut_karakterler):
+            print("Hatalı giriş yaptınız.")
+            karakter_secimi = input()
+        
         if karakter_secimi == "Dev":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, dev)
             mevcut_karakterler.remove("Dev")
-            
-            print("Dev karakteri seçildi.")
+
             print("Dev karakterinin canı: ", oyuncunun_karakteri)
-            print("Dev karakterinin silahları: ", "Demir Yumruk", "Balta", "Balyoz")
+            print("Dev karakterinin silahları: ", "Demir yumruk\t", "Balta\t\t", "Balyoz")
             
             
             kazanan=3
         elif karakter_secimi == "buyucu":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, buyucu)
             mevcut_karakterler.remove("buyucu")
-           
-            print("buyucu karakteri seçildi.")
+
             print("buyucu karakterinin canı: ", oyuncunun_karakteri)
-            print("buyucu karakterinin silahları: ", "Ateş küre", "Can içeçeği", "Buz oku")         
+            print("buyucu karakterinin silahları: ", "Ates kure\t", "Can icecegi\t\t", "Buz oku")         
             kazanan=3
         elif karakter_secimi == "Şovalye":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, sovalye)
             mevcut_karakterler.remove("Şovalye")
-            
-            print("Şovalye karakteri seçildi.")
+
             print("Şovalye karakterinin canı: ", oyuncunun_karakteri)
-            print("Şovalye karakterinin silahları: ", "Kralın Kılıçı", "Topuz", "Kalkan")
+            print("Şovalye karakterinin silahları: ", "Kralin kılıcı\t", "Topuz\t\t", "Kalkan")
             
             kazanan=3
 
         elif karakter_secimi == "Ejderha":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, ejderha)
             mevcut_karakterler.remove("Ejderha")
-            
-            print("Ejderha karakteri seçildi.")
+
             print("Ejderha karakterinin canı: ", oyuncunun_karakteri)
-            print("Ejderha karakterinin silahları: ", "Ateş baskını", "Rüzgar", "Işın gözler")
+            print("Ejderha karakterinin silahları: ", "Ates baskini\t", "Ruzgar\t\t", "Isın gozler\t")
             
             kazanan=3
-        while(karakter_secimi not in asil_karakterler):
-            print("Hatalı giriş yaptınız.")
-            karakter_secimi = input()
+        
         bilgisayar_secimi_oyun = random.choice(mevcut_karakterler)
         if(bilgisayar_secimi_oyun=="Dev"):
             bilgisayarin_karakteri = karakter_secimi_fonksiyonu(bilgisayar_secimi_oyun, dev)
@@ -216,35 +216,32 @@ while(i):
 
 
     
-    while (kazanan==-1):
-        print("\n\n\nBilgisayarın karakteri seçiliyor.")
+    while (kazanan==-1):     
         bilgisayar_secimi_oyun = random.choice(mevcut_karakterler)
-        
-        print("Bilgisayarın karakteri seçildi.")
+        print("Bilgisayarın ", bilgisayar_secimi_oyun, " karakterini seçti.")
         if(bilgisayar_secimi_oyun=="Dev"):
             bilgisayarin_karakteri = karakter_secimi_fonksiyonu(bilgisayar_secimi_oyun, dev)
-            print("Dev karakteri seçildi.")
-            print("Dev karakterinin silahları: ", "Demir Yumruk", "Balta", "Balyoz")
+            print("Dev karakterinin silahları: ", "Demir yumruk\t", "Balta\t", "Balyoz")
             print("Bilgisayarının karakterinin canı: ", bilgisayarin_karakteri)
             kazanan =3
         elif(bilgisayar_secimi_oyun=="buyucu"):
             bilgisayarin_karakteri = karakter_secimi_fonksiyonu(bilgisayar_secimi_oyun, buyucu)
-            print("buyucu karakteri seçildi.")
-            print("buyucu karakterinin silahları: ", "Ateş küre", "Can içeçeği", "Buz oku")
+
+            print("buyucu karakterinin silahları: ", "Ates kure\t", "Can icecegi\t", "Buz oku")
             print("Bilgisayarının karakterinin canı: ", bilgisayarin_karakteri)
             kazanan=3
 
         elif(bilgisayar_secimi_oyun=="Şovalye"):
             bilgisayarin_karakteri = karakter_secimi_fonksiyonu(bilgisayar_secimi_oyun, sovalye)
-            print("Şovalye karakteri seçildi.")
-            print("Şovalye karakterinin silahları: ", "Kralın Kılıçı", "Topuz", "Kalkan")
+
+            print("Şovalye karakterinin silahları: ", "Kralin kilici\t", "Topuz\t", "Kalkan")
             print("Bilgisayarının karakterinin canı: ", bilgisayarin_karakteri)
             kazanan=3
 
         elif(bilgisayar_secimi_oyun=="Ejderha"):
             bilgisayarin_karakteri = karakter_secimi_fonksiyonu(bilgisayar_secimi_oyun, ejderha)
-            print("Ejderha karakteri seçildi.")
-            print("Ejderha karakterinin silahları: ", "Ateş baskını", "Rüzgar", "Işın gözler")
+
+            print("Ejderha karakterinin silahları: ", "Ates baskini\t", "Ruzgar\t", "Isın gozler")
             print("Bilgisayarının karakterinin canı: ", bilgisayarin_karakteri)
             kazanan=3
 
@@ -265,28 +262,28 @@ while(i):
             
             print("Dev karakteri seçildi.")
             print("Dev karakterinin canı: ", oyuncunun_karakteri)
-            print("Dev karakterinin silahları: ", "Demir Yumruk", "Balta", "Balyoz")
+            print("Dev karakterinin silahları: ", "Demir yumruk\t", "Balta\t", "Balyoz")
         elif karakter_secimi == "buyucu":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, buyucu)
             mevcut_karakterler.remove("buyucu")
             
             print("buyucu karakteri seçildi.")
             print("buyucu karakterinin canı: ", oyuncunun_karakteri)
-            print("buyucu karakterinin silahları: ", "Ateş küre", "Can içeçeği", "Buz oku")
+            print("buyucu karakterinin silahları: ", "Ates kure\t", "Can icecegi\t", "Buz oku")
         elif karakter_secimi == "Şovalye":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, sovalye)
             mevcut_karakterler.remove("Şovalye")
             
             print("Şovalye karakteri seçildi.")
             print("Şovalye karakterinin canı: ", oyuncunun_karakteri)
-            print("Şovalye karakterinin silahları: ", "Kralın Kılıcı", "Topuz", "Kalkan")
+            print("Şovalye karakterinin silahları: ", "Kralin kilici\t", "Topuz\t", "Kalkan")
         elif karakter_secimi == "Ejderha":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, ejderha)
             mevcut_karakterler.remove("Ejderha")
             
             print("Ejderha karakteri seçildi.")
             print("Ejderha karakterinin canı: ", oyuncunun_karakteri)
-            print("Ejderha karakterinin silahları: ", "Ateş baskını", "Rüzgar", "Işın gözler")
+            print("Ejderha karakterinin silahları: ", "Ates baskini", "Ruzgar", "Isın gozler")
 
           
     print("\n\n\n\n ############# Savaş başlıyor ############# \n")
@@ -363,18 +360,20 @@ while(i):
         if(takip==1):
             print("Silahınızı seçiniz.")
             if(karakter_secimi=="Dev"):
-                print("Demir Yumruk", "Balta", "Balyoz")
+                print("Demir yumruk\t", "Balta\t", "Balyoz")
             elif(karakter_secimi=="buyucu"):
-                print("Ateş küre", "Can içeçeği", "Buz oku")
+                print("Ates kure\t", "Can icecegi\t", "Buz oku")
             elif(karakter_secimi=="Şovalye"):
-                print("Kralın Kılıçı", "Topuz", "Kalkan")
+                print("Kralin kilici\t", "Topuz\t", "Kalkan")
             elif(karakter_secimi=="Ejderha"):
-                print("Ateş baskını", "Rüzgar", "Işın gözler")
+                print("Ates baskini\t", "Ruzgar\t", "Isın gozler")
             karakterin_silahi = input()
             while(karakterin_silahi not in silahlar):
                 print("Hatalı giriş yaptınız.")
                 karakterin_silahi = input()
-            bilgisayarin_karakteri = bilgisayarin_karakteri - atak(karakterin_silahi)
+            hasar=atak(karakterin_silahi)
+            print("Verilen Hasar: ", hasar, "\n")
+            bilgisayarin_karakteri = bilgisayarin_karakteri - hasar
         if(takip==-1):
             if(bilgisayar_secimi_oyun=="Dev"):
                 bilgisayarin_silahi = random.choice(dev_silahlar)
@@ -385,7 +384,9 @@ while(i):
             elif(bilgisayar_secimi_oyun=="Ejderha"):
                 bilgisayarin_silahi = random.choice(ejderha_silahlar)
             print("Bilgisayarın silahı: ", bilgisayarin_silahi)
-            oyuncunun_karakteri = oyuncunun_karakteri - atak(bilgisayarin_silahi)
+            hasar2=atak(bilgisayarin_silahi)
+            print("Alınan Hasar: ", hasar2, "\n")
+            oyuncunun_karakteri = oyuncunun_karakteri - hasar2
         takip=0
         if(i==0):
             break
