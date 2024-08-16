@@ -88,7 +88,8 @@ while(i):
     
     print("\n Oyunu Sonlandırmak için 'q' tuşuna basınız.\n")
         
- 
+    mevcut_karakterler = ["Dev", "buyucu", "Şovalye", "Ejderha"]
+    kazanan = 0
     secim_oyun = input("Taş kağıt makas oyununu oynamak için 'Taş', 'Kağıt' veya 'Makas'dan 1'ini seçiniz:")    
     while(kazanan==0):#taş kağıt makas oyunu 
         bilgisayar_secimi = random.choice(tas_kagit_makas)
@@ -181,8 +182,8 @@ while(i):
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, buyucu)
             mevcut_karakterler.remove("buyucu")
 
-            print("buyucu karakterinin canı: ", oyuncunun_karakteri)
-            print("buyucu karakterinin silahları: ", "Ates kure\t", "Can icecegi\t\t", "Buz oku")         
+            print("Büyücü karakterinin canı: ", oyuncunun_karakteri)
+            print("Büyücü karakterinin silahları: ", "Ates kure\t", "Can icecegi\t\t", "Buz oku")         
             kazanan=3
         elif karakter_secimi == "Şovalye":
             oyuncunun_karakteri = karakter_secimi_fonksiyonu(karakter_secimi, sovalye)
@@ -371,9 +372,13 @@ while(i):
             while(karakterin_silahi not in silahlar):
                 print("Hatalı giriş yaptınız.")
                 karakterin_silahi = input()
-            hasar=atak(karakterin_silahi)
-            print("Verilen Hasar: ", hasar, "\n")
-            bilgisayarin_karakteri = bilgisayarin_karakteri - hasar
+            if(karakterin_silahi=="Can icecegi"):
+                oyuncunun_karakteri = oyuncunun_karakteri + Can_icecegi
+                print("Canınız arttı. Yeni canınız: ", oyuncunun_karakteri)
+            else:
+                hasar=atak(karakterin_silahi)
+                print("Verilen Hasar: ", hasar, "\n")
+                bilgisayarin_karakteri = bilgisayarin_karakteri - hasar
         if(takip==-1):
             if(bilgisayar_secimi_oyun=="Dev"):
                 bilgisayarin_silahi = random.choice(dev_silahlar)
@@ -384,9 +389,13 @@ while(i):
             elif(bilgisayar_secimi_oyun=="Ejderha"):
                 bilgisayarin_silahi = random.choice(ejderha_silahlar)
             print("Bilgisayarın silahı: ", bilgisayarin_silahi)
-            hasar2=atak(bilgisayarin_silahi)
-            print("Alınan Hasar: ", hasar2, "\n")
-            oyuncunun_karakteri = oyuncunun_karakteri - hasar2
+            if(bilgisayarin_silahi=="Can icecegi"):
+                bilgisayarin_karakteri = bilgisayarin_karakteri + Can_icecegi
+                print("Bilgisayarın canı arttı. Yeni canı: ", bilgisayarin_karakteri)
+            else:
+                hasar2=atak(bilgisayarin_silahi)
+                print("Alınan Hasar: ", hasar2, "\n")
+                oyuncunun_karakteri = oyuncunun_karakteri - hasar2
         takip=0
         if(i==0):
             break
